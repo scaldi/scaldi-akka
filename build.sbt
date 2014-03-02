@@ -4,7 +4,7 @@ description := "Scaldi-Akka - Scaldi integration for Akka"
 
 organization := "org.scaldi"
 
-version := "0.3-SNAPSHOT"
+version := "0.3"
 
 scalaVersion := "2.10.3"
 
@@ -12,7 +12,7 @@ scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-actor" % "2.2.3" % "provided",
-    "org.scaldi" %% "scaldi" % "0.3-SNAPSHOT",
+    "org.scaldi" %% "scaldi" % "0.3",
     "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 

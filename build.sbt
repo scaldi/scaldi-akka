@@ -11,9 +11,9 @@ scalaVersion := "2.10.3"
 scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
-    "com.typesafe.akka" %% "akka-actor" % "2.2.3" % "provided",
-    "org.scaldi" %% "scaldi" % "0.3",
-    "org.scala-lang" % "scala-reflect" % scalaVersion.value
+  "com.typesafe.akka" %% "akka-actor" % "2.2.3" % "provided",
+  "org.scaldi" %% "scaldi" % "0.3",
+  "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 
 publishMavenStyle := true

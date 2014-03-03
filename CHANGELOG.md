@@ -1,3 +1,7 @@
+## v0.3.1 (03.03.2014)
+
+* Now using implicit `ActorRefFactory` instead of `ActorSystem` in order to use `ActorContext` when available
+
 ## v0.3 (02.03.2014 - Initial release)
 
 * Allows to inject actor `Props` and `ActorRef` for the actor bindings:

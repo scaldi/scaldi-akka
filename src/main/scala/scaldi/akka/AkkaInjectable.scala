@@ -1,11 +1,12 @@
 package scaldi.akka
 
-import scaldi.{InjectConstraints, Identifier, Injector, Injectable}
+import scaldi._
+import scaldi.util.constraints.NotNothing
+
 import scala.reflect.ClassTag
 import scala.reflect.runtime.universe.TypeTag
-import scaldi.util.constraints.{Or, NotNothing}
-import akka.actor._
-import scaldi.InjectConstraints
+
+import _root_.akka.actor._
 
 trait AkkaInjectable extends Injectable {
   protected def injectActorProps[T](implicit injector: Injector, ct: ClassTag[T], tt: TypeTag[T], nn: NotNothing[T]): Props =
@@ -45,7 +46,7 @@ trait AkkaInjectable extends Injectable {
     f.actorOf(injectActorProps(constraints)(injector, ct, tt, nn), name)
 }
 
-object AkkaInjectable extends OpenAkkaInjectable
+object AkkaInjectable extends OpenAkkaInjectable with OpenInjectable
 
 trait OpenAkkaInjectable extends AkkaInjectable {
   override def injectActorProps[T](implicit injector: Injector, ct: ClassTag[T], tt: TypeTag[T], nn: NotNothing[T]): Props =

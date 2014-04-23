@@ -21,7 +21,7 @@ trait AkkaInjectable extends Injectable {
 
   protected def injectActorProps[T](identifiers: Identifier*)
                                    (implicit injector: Injector, ct: ClassTag[T], tt: TypeTag[T], nn: NotNothing[T]): Props =
-    Props.create(classOf[ScaldiActorProducer[T]], injectProvider[T](identifiers: _*)(injector, tt, nn), ct.runtimeClass)
+    Props.create(classOf[ScaldiActorProducer[T]], injectProvider[T](InjectConstraints(None, identifiers.toList))(injector, tt, nn), ct.runtimeClass)
 
   protected def injectActorRef[T](identifiers: Identifier*)
                                  (implicit f: ActorRefFactory, injector: Injector, ct: ClassTag[T], tt: TypeTag[T], nn: NotNothing[T]): ActorRef =

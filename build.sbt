@@ -6,13 +6,15 @@ organization := "org.scaldi"
 
 version := "0.4-SNAPSHOT"
 
-scalaVersion := "2.10.3"
+crossScalaVersions := Seq("2.10.4", "2.11.0")
+
+scalaVersion := "2.11.0"
 
 scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.2.3" % "provided",
-  "org.scaldi" %% "scaldi" % "0.3",
+  "com.typesafe.akka" %% "akka-actor" % "2.3.2" % "provided",
+  "org.scaldi" %% "scaldi" % "0.3.1",
   "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 

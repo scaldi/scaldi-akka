@@ -1,3 +1,7 @@
+## v0.3.3 (24.04.2014)
+
+* Updated to scaldi version 0.3.2
+
 ## v0.3.2 (23.04.2014)
 
 * Added support for scala 2.11 (cross-compiling with 2.10 and 2.11)

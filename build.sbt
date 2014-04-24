@@ -4,7 +4,7 @@ description := "Scaldi-Akka - Scaldi integration for Akka"
 
 organization := "org.scaldi"
 
-version := "0.3.3"
+version := "0.3.4-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.4", "2.11.0")
 

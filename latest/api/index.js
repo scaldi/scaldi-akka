@@ -1,0 +1,1 @@
+Index.PACKAGES = {"scaldi" : [], "scaldi.akka" : [{"object" : "scaldi\/akka\/AkkaInjectable$.html", "trait" : "scaldi\/akka\/AkkaInjectable.html", "name" : "scaldi.akka.AkkaInjectable"}, {"trait" : "scaldi\/akka\/OpenAkkaInjectable.html", "name" : "scaldi.akka.OpenAkkaInjectable"}, {"class" : "scaldi\/akka\/ScaldiActorProducer.html", "name" : "scaldi.akka.ScaldiActorProducer"}]};

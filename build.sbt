@@ -18,6 +18,19 @@ libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 
+// nice prompt!
+shellPrompt in ThisBuild := { state =>
+  scala.Console.BLUE + Project.extract(state).currentRef.project + "> " + scala.Console.RESET
+}
+
+git.remoteRepo := "git@github.com:scaldi/scaldi-akka.git"
+
+site.settings
+
+site.includeScaladoc()
+
+ghpages.settings
+
 publishMavenStyle := true
 
 publishArtifact in Test := false

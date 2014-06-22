@@ -4,7 +4,7 @@ description := "Scaldi-Akka - Scaldi integration for Akka"
 
 organization := "org.scaldi"
 
-version := "0.4"
+version := "0.4.1-SNAPSHOT"
 
 scalaVersion := "2.11.1"
 

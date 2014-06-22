@@ -1,3 +1,7 @@
+## v0.4 (22.06.2014)
+
+* Updated to scaldi version 0.4
+
 ## v0.3.3 (24.04.2014)
 
 * Updated to scaldi version 0.3.2

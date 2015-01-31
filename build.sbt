@@ -1,40 +1,25 @@
 name := "scaldi-akka"
+organization := "org.scaldi"
+version := "0.5"
 
 description := "Scaldi-Akka - Scaldi integration for Akka"
+homepage := Some(url("http://scaldi.org"))
+licenses := Seq("Apache License, ASL Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 
-organization := "org.scaldi"
-
-version := "0.4.1-SNAPSHOT"
-
-scalaVersion := "2.11.1"
-
+scalaVersion := "2.11.5"
 scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.3.3" % "provided",
-  "org.scaldi" %% "scaldi" % "0.4",
+  "com.typesafe.akka" %% "akka-actor" % "2.3.9" % "provided",
+  "org.scaldi" %% "scaldi" % "0.5",
   "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 
-// nice prompt!
-shellPrompt in ThisBuild := { state =>
-  scala.Console.BLUE + Project.extract(state).currentRef.project + "> " + scala.Console.RESET
-}
-
-git.remoteRepo := "git@github.com:scaldi/scaldi-akka.git"
-
-site.settings
-
-site.includeScaladoc()
-
-ghpages.settings
+// Publishing
 
 publishMavenStyle := true
-
 publishArtifact in Test := false
-
 pomIncludeRepository := (_ => false)
-
 publishTo <<= version { v: String =>
   val nexus = "https://oss.sonatype.org/"
   if (v.trim.endsWith("SNAPSHOT"))
@@ -43,30 +28,29 @@ publishTo <<= version { v: String =>
     Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
+git.remoteRepo := "git@github.com:scaldi/scaldi-akka.git"
+site.settings
+site.includeScaladoc()
+ghpages.settings
+
+// Other stuff
+
+// nice prompt!
+shellPrompt in ThisBuild := { state =>
+  scala.Console.BLUE + Project.extract(state).currentRef.project + "> " + scala.Console.RESET
+}
+
+startYear := Some(2011)
+organizationHomepage := Some(url("https://github.com/scaldi"))
+scmInfo := Some(ScmInfo(
+  browseUrl = url("https://github.com/scaldi/scaldi-akka"),
+  connection = "scm:git:git@github.com:scaldi/scaldi-akka.git"
+))
 pomExtra := <xml:group>
-  <url>http://scaldi.github.io/scaldi/Scaldi.html</url>
-  <inceptionYear>2014</inceptionYear>
-  <licenses>
-    <license>
-      <name>Apache License, ASL Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
   <developers>
     <developer>
       <id>OlegIlyenko</id>
       <name>Oleg Ilyenko</name>
     </developer>
   </developers>
-  <issueManagement>
-    <system>GitHub</system>
-    <url>http://github.com/scaldi/scaldi-akka/issues</url>
-  </issueManagement>
-  <scm>
-    <connection>scm:git:git@github.com:scaldi/scaldi-akka.git</connection>
-    <url>git@github.com:scaldi/scaldi-akka.git</url>
-  </scm>
 </xml:group>
-
-resolvers += "Typesafe Releases Repository" at "http://repo.typesafe.com/typesafe/releases/"

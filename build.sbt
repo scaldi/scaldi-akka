@@ -1,6 +1,6 @@
 name := "scaldi-akka"
 organization := "org.scaldi"
-version := "0.6-SNAPSHOT"
+version := "0.5.3"
 
 description := "Scaldi-Akka - Scaldi integration for Akka"
 homepage := Some(url("http://scaldi.org"))

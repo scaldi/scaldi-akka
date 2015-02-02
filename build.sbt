@@ -11,7 +11,7 @@ scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.9" % "provided",
-  "org.scaldi" %% "scaldi" % "0.5.1",
+  "org.scaldi" %% "scaldi" % "0.5.3",
   "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 

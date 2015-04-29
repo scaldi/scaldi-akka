@@ -1,12 +1,12 @@
 name := "scaldi-akka"
 organization := "org.scaldi"
-version := "0.5.5"
+version := "0.5.6-SNAPSHOT"
 
 description := "Scaldi-Akka - Scaldi integration for Akka"
 homepage := Some(url("http://scaldi.org"))
 licenses := Seq("Apache License, ASL Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(

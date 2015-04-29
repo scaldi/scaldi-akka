@@ -1,6 +1,6 @@
 name := "scaldi-akka"
 organization := "org.scaldi"
-version := "0.6-SNAPSHOT"
+version := "0.5.5"
 
 description := "Scaldi-Akka - Scaldi integration for Akka"
 homepage := Some(url("http://scaldi.org"))
@@ -11,7 +11,7 @@ scalacOptions += "-deprecation"
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.9" % "provided",
-  "org.scaldi" %% "scaldi" % "0.5.4",
+  "org.scaldi" %% "scaldi" % "0.5.5",
   "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 

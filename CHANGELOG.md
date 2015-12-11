@@ -1,3 +1,9 @@
+## v0.5.7 (2015-12-11)
+
+* Updated scaldi v0.5.7
+* Updated akka v2.4.1
+* Compiled with Java 8 from now on
+
 ## v0.5.6 (28.05.2015)
 
 * Updated to scaldi version 0.5.6

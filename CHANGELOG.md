@@ -1,3 +1,9 @@
+## v0.5.8 (2016-11-03)
+
+* Updated scaldi v0.5.8
+* Cross-compile for scala 2.11 and 2.12
+* Updated dependencies
+
 ## v0.5.7 (2015-12-11)
 
 * Updated scaldi v0.5.7
